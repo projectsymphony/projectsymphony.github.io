@@ -2,7 +2,7 @@
     <head>
         <title>Symphony</title>
         <link rel="stylesheet" href="./style.css">
-        <script src="connect.js"></script>
+        <script src="./included/connect.php"></script>
     </head>
     <body>
         <h1>Symphony</h1>
