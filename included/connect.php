@@ -13,5 +13,4 @@ define('DB_HOST', '35.231.65.224');
 
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-
 ?>
