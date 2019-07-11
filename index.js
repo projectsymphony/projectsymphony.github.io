@@ -5,8 +5,8 @@ const path = require('path');
 
 //Starting Express.js app
 const app = express();
-app.listen('99', () => {
-    console.log('Server started on port 99')
+app.listen('3000', () => {
+    console.log('Server started on port 3000')
 });
 
 app.set('view engine', 'ejs')
