@@ -2,28 +2,39 @@ const mysql = require('mysql');
 const express = require('express');
 const http = require('http');
 
-var con = mysql.createConnection({
+// Creating connection
+const db = mysql.createConnection({
     host: "35.231.65.224",
     user: "root",
-    password: "aH5ckblhF084kpCI",
+    password: 'aH5ckblhF084kpCI',
     database: "Symphony"
 });
 
-con.connect(function (err) {
-    if (err) throw err;
-    console.log("Connected!");
+// Connecting to database
+db.connect((err) => {
+    if (err) {
+        throw err;
+    }
+    console.log("Connection established!");
+})
+
+// Starting app on Express
+const app = express();
+
+app.listen('3000', () => {
+    console.log('Server started on port 3000')
 });
+
+app.get('/insertTable', (req, res) => {
+    let sql = "INSERT INTO post (author, date, content) VALUES ('Pogchamp', 'today', 'poggers');";
+    db.query(sql, (err, result) => {
+        if (err) throw err;
+        console.log(result);
+        res.send("Data inserted!")
+    })
+})
 
 /*
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-    host: "35.231.65.224",
-    user: "root",
-    password: "aH5ckblhF084kpCI",
-    database: "Symphony"
-});
-
 con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
