@@ -26,7 +26,7 @@ app.listen('3000', () => {
 });
 
 app.get('/insertTable', (req, res) => {
-    let sql = "INSERT INTO post (author, date, content) VALUES ('Pogchamp', 'today', 'poggers');";
+    let sql = "INSERT INTO post (author, date, content) VALUES ('bro moment', 'today', 'im the man');";
     db.query(sql, (err, result) => {
         if (err) throw err;
         console.log(result);
