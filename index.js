@@ -8,6 +8,8 @@ app.listen('99', () => {
     console.log('Server started on port 99')
 });
 
+app.use('/static', express.static('static'))
+
 //Loading in default HTML page
 app.get('/', (req, res) => {
     console.log("Loading index.html...")
