@@ -15,22 +15,28 @@
         $sql = "SELECT * FROM post";
         $result = mysqli_query($conn, $sql);
         if($result -> num_rows > 0){
-                echo " <table> ";
-                echo "     <tr> ";
-                echo "         <th>Post ID</th> ";
-                echo "         <th>Author</th> ";
-                echo "         <th>Date</th> ";
-                echo "         <th>Content</th> ";
-                echo "     </tr> ";
+                // echo " <table> ";
+                // echo "     <tr> ";
+                // echo "         <th>Post ID</th> ";
+                // echo "         <th>Author</th> ";
+                // echo "         <th>Date</th> ";
+                // echo "         <th>Content</th> ";
+                // echo "     </tr> ";
                 while ($rowArray = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                    echo "     <tr> ";
-                    echo "         <td>" . $rowArray[post_id] . "</td> ";
-                    echo "         <td>" . $rowArray[author] . "</td> ";
-                    echo "         <td>" . $rowArray[date] . "</td> ";
-                    echo "         <td>" . $rowArray[content] . "</td> ";
-                    echo "     </tr> ";
+                    echo "     <div class='event-block'>";
+                    echo "         <h3>" . $rowArray[post_id] . "</h3>";
+                    echo "         <h3>" . $rowArray[author] . "</h3>";
+                    echo "         <h3>" . $rowArray[date] . "</h3>";
+                    echo "         <p>" . $rowArray[content] . "</p>";
+                    echo "     </div>";
+                    
+                    // echo "     <tr> ";
+                    // echo "         <td>" . $rowArray[post_id] . "</td> ";
+                    // echo "         <td>" . $rowArray[author] . "</td> ";
+                    // echo "         <td>" . $rowArray[date] . "</td> ";
+                    // echo "         <td>" . $rowArray[content] . "</td> ";
+                    // echo "     </tr> ";
                 }
-                echo " <table> ";
         } else {
             die();
         }
