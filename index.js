@@ -12,6 +12,6 @@ app.use('/static', express.static('static'))
 
 //Loading in default HTML page
 app.get('/', (req, res) => {
-    console.log("Loading index.html...")
+    console.log("im philip");
     res.sendFile(path.join(__dirname + '/index.html'));
 });
