@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+/*  ----- COLORS -----
+    #2A2B72 - st. patrick's blue
+    #2528C6 - persian blue
+    #2E93EA - bleu de france
+    #B4C5E4 - lightsteel blue
+    #F9FDFF - ghost white
+    ----- COLORS ----- */
+
+body {
+    background-color: #F9FDFF;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #2528C6;
+    padding: 0px;
+    margin: 0px;
+    font-size: 75px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Montserrat';
+    color: #2E93EA;
+    font-weight: 700;
+    text-align: center;
+    margin: 0px;
+    margin-top: 5px;
+    padding: 0px;
+}
