@@ -32,3 +32,30 @@ h3 {
     margin-top: 5px;
     padding: 0px;
 }
+
+.event-block{
+    width: 75%;
+    float: right;
+    margin-right: 20px;
+}
+
+.event-block p{
+    text-align: right;
+}
+
+.event-block h4 {
+    text-align: left;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5em;
+    font-style: bold;
+}
+
+.event-block h5 {
+    text-align: left;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+}

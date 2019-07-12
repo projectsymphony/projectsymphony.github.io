@@ -10,7 +10,9 @@
     <body>
         <h1>Symphony</h1>
         <h3>All your events, in one place.</h3>
-        <p>Welcome!</p>
+        <br>
+        <br>
+        <br>
         <?php
         $sql = "SELECT * FROM post";
         $result = mysqli_query($conn, $sql);
@@ -24,11 +26,11 @@
                 // echo "     </tr> ";
                 while ($rowArray = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                     echo "     <div class='event-block'>";
-                    echo "         <h3>" . $rowArray[post_id] . "</h3>";
-                    echo "         <h3>" . $rowArray[author] . "</h3>";
-                    echo "         <h3>" . $rowArray[date] . "</h3>";
-                    echo "         <p>" . $rowArray[content] . "</p>";
+                    echo "         <h4>" . $rowArray[content] . "</h4>";
+                    echo "         <h5>" . $rowArray[date] . " " . $rowArray[author] . "</h5>";
+                    echo " <br> <hr> <br> ";
                     echo "     </div>";
+                    echo "     <br>";
                     
                     // echo "     <tr> ";
                     // echo "         <td>" . $rowArray[post_id] . "</td> ";
