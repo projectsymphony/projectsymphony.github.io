@@ -55,9 +55,8 @@ hr{
     margin-right: 20px;
 
 }
-
 .event-block:active{
-    background-color: rgb(148, 193, 233);
+    background-color: #2528C6;
     padding: 0 0;
 }
 
@@ -90,6 +89,17 @@ hr{
     color: black;
 }
 
+.event-block h4:active {
+    text-align: left;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: 2.0em;
+    font-style: bold;
+    text-decoration: none;
+    color: rgb(122, 187, 224);
+
+}
 .event-block h5 {
     text-align: left;
     font-family: sans-serif;
