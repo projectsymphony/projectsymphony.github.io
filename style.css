@@ -33,14 +33,19 @@ h3 {
     padding: 0px;
 }
 
-.event-block{
+.event-box-container{    
+    float: right;
     width: 75%;
+}
+.event-block{
+    width: 100%;
     float: right;
     margin-right: 20px;
 }
 
 .event-block p{
-    text-align: right;
+    text-align: left;
+    font-family: sans-serif;
 }
 
 .event-block h4 {
@@ -48,7 +53,7 @@ h3 {
     font-family: sans-serif;
     margin: 0px;
     padding: 0px;
-    font-size: 1.5em;
+    font-size: 2.0em;
     font-style: bold;
 }
 
@@ -57,5 +62,15 @@ h3 {
     font-family: sans-serif;
     margin: 0px;
     padding: 0px;
+    padding-top: 5px; 
+    color: #2E93EA;
+}
 
+.navbar{
+    width: 22%;
+    display: inline-block;
+    background: #2528C6;
+    height: 100vh;
+    position: fixed;
+    margin-left: 0;
 }
