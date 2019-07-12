@@ -21,9 +21,9 @@
             echo "<div class='event-box-container'>";
                 while ($rowArray = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                     echo "     <div class='event-block'>";
-                    echo "         <h6>Posted By: " . $rowArray[author] .  "</h6>";
+                    echo "         <h6>posted by " . $rowArray[author] .  "</h6>";
                     echo "         <h4>" . $rowArray[title] . "</h4>";
-                    echo "         <h5>" . $rowArray[location] . "  ---  " . $rowArray[date] . "</h5>";
+                    echo "         <h5>" . $rowArray[date] . "  <span class='location-tag'>@  " . $rowArray[location] . "</span></h5>";
                     echo "         <p>" . $rowArray[description] ;
                     echo " <br> <hr> <br> ";
                     echo "     </div>";

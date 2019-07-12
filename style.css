@@ -73,7 +73,7 @@ h3 {
     margin: 0px;
     padding: 0px;
     padding-top: 5px; 
-    color: #2528C6;
+    color: lightslategray;
 }
 
 .navbar{
@@ -84,4 +84,8 @@ h3 {
     margin: 0px;
     padding: 0px;
 
+}
+
+.location-tag {
+    color: #2528C6;
 }
