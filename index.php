@@ -24,7 +24,8 @@
                     echo "         <h6>posted by " . $rowArray[author] .  "</h6>";
                     echo "         <h4>" . $rowArray[title] . "</h4>";
                     echo "         <h5>" . $rowArray[date] . "  <span class='location-tag'>@  " . $rowArray[location] . "</span></h5>";
-                    echo "         <p>" . $rowArray[description] ;
+                    echo "         <p class='description'>" . $rowArray[description] . "</p>";
+                    echo "         <h6 class='timestamp'>" . $rowArray[created_at] . "</h6>";
                     echo " <br> <hr> <br> ";
                     echo "     </div>";
                     echo "     <br>";

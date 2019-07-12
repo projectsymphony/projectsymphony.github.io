@@ -45,9 +45,20 @@ h3 {
     margin-right: 20px;
 }
 
-.event-block p{
+.description {
     text-align: left;
     font-family: sans-serif;
+    margin: 1em 0px;
+    display: inline-block;
+}
+
+.timestamp{
+    text-align: right;
+    font-family: sans-serif;
+    margin: 0em 0px;
+    padding: 0px;
+    display: inline-block;  
+    float: right;
 }
 
 .event-block h4 {
@@ -83,7 +94,7 @@ h3 {
     position: fixed;
     margin: 0px;
     padding: 0px;
-
+    border-right: 1px solid black;
 }
 
 .location-tag {
