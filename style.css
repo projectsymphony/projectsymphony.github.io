@@ -33,16 +33,32 @@ h3 {
     margin: 0px;
     margin-top: 5px;
     padding: 0px;
+    text-decoration: none;
 }
 
 .event-box-container{    
     float: right;
     width: 75%;
+    text-decoration: none;
 }
 .event-block{
     width: 100%;
     float: right;
     margin-right: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+hr{
+    width: 100%;
+    float: right;
+    margin-right: 20px;
+
+}
+
+.event-block:active{
+    background-color: rgb(148, 193, 233);
+    padding: 0 0;
 }
 
 .description {
@@ -50,6 +66,8 @@ h3 {
     font-family: sans-serif;
     margin: 1em 0px;
     display: inline-block;
+    text-decoration: none;
+    color: black;
 }
 
 .timestamp{
@@ -57,8 +75,8 @@ h3 {
     font-family: sans-serif;
     margin: 0em 0px;
     padding: 0px;
-    display: inline-block;  
     float: right;
+    color: lightslategray;
 }
 
 .event-block h4 {
@@ -68,6 +86,8 @@ h3 {
     padding: 0px;
     font-size: 2.0em;
     font-style: bold;
+    text-decoration: none;
+    color: black;
 }
 
 .event-block h5 {
@@ -77,14 +97,16 @@ h3 {
     padding: 0px;
     padding-top: 5px; 
     color: #2E93EA;
+    text-decoration: none;
 }
-.event-block h6 {
+.author {
     text-align: left;
     font-family: sans-serif;
     margin: 0px;
     padding: 0px;
     padding-top: 5px; 
     color: lightslategray;
+    display: inline-block;
 }
 
 .navbar{
@@ -94,9 +116,9 @@ h3 {
     position: fixed;
     margin: 0px;
     padding: 0px;
-    border-right: 1px solid black;
 }
 
 .location-tag {
     color: #2528C6;
+    text-decoration: none;
 }
