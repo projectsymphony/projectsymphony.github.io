@@ -8,9 +8,11 @@
         <script src="./included/connect.php"></script>
     </head>
     <body>
+        <div class="title-heading">
         <h1>Symphony</h1>
         <h3>All your events, in one place.</h3>
         <br>
+        </div>
         <div class="navbar"> <h3>Bruh</h3> </div>
         <?php
         $sql = "SELECT * FROM post";
@@ -19,8 +21,9 @@
             echo "<div class='event-box-container'>";
                 while ($rowArray = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                     echo "     <div class='event-block'>";
+                    echo "         <h6>Posted By: " . $rowArray[author] .  "</h6>";
                     echo "         <h4>" . $rowArray[title] . "</h4>";
-                    echo "         <h5>" . $rowArray[location] . " " . $rowArray[date] . " " . $rowArray[author] . "</h5>";
+                    echo "         <h5>" . $rowArray[location] . "  ---  " . $rowArray[date] . "</h5>";
                     echo "         <p>" . $rowArray[description] ;
                     echo " <br> <hr> <br> ";
                     echo "     </div>";
