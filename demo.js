@@ -14,19 +14,10 @@ con.connect(function (err) {
     console.log("Connected!");
 });
 
-/*
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-    host: "35.231.65.224",
-    user: "root",
-    password: "aH5ckblhF084kpCI",
-    database: "Symphony"
-});
-
 con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
+    for (var i = 0; var)
     var sql = "INSERT INTO post (author, date, content) VALUES ('Pogchamp', 'today', 'poggers');";
     con.query(sql, function (err, result) {
         if (err) throw err;
@@ -43,4 +34,3 @@ con.connect(function (err) {
         console.log("Inserted successfully!");
     });
 });
-*/
