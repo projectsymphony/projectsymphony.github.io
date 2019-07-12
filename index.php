@@ -13,7 +13,9 @@
         <h3>All your events, in one place.</h3>
         <br>
         </div>
-        <div class="navbar"> <h3>Bruh</h3> </div>
+        <div class="navbar"> 
+            <input class="newButton" type="button" value="&#x266b; New" onclick="window.location.href='http://tejas.website'"/>
+        </div>
         <?php
         $sql = "SELECT * FROM post";
         $result = mysqli_query($conn, $sql);
@@ -35,5 +37,4 @@
             die();
         }
     ?>
-    </body>
 </html>
