@@ -15,6 +15,10 @@ body {
     padding: 0px;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
@@ -23,6 +27,17 @@ h1 {
     margin: 0px;
     font-size: 75px;
     text-align: center;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-weight: bolder;
+    margin-left: 5%;
+    font-size: 36px;
+}
+
+h1:hover {
+    color: #2E93EA;
 }
 
 h3 {
@@ -136,7 +151,7 @@ hr{
     justify-content: center;
 }
 
-.navbar input.newButton {
+.navbar input {
     background-color: #2E93EA;
     height: 75px;
     width: 100%;
@@ -164,4 +179,8 @@ hr{
 .location-tag {
     color: #2528C6;
     text-decoration: none;
+}
+
+.input-field{
+    margin: 0% 50%;
 }
