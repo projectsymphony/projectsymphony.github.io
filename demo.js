@@ -23,14 +23,14 @@ con.connect(function (err) {
     console.log("Connected!");
     CSVtoJSON().fromFile(process.argv[2]).then(grabbed => {
         for (var i = 0; i < grabbed.length; i++) {
-            var sql = "INSERT INTO post (author, date, title, description, tags, location) VALUES (";
-            var date = "9/9/1999";
+            var sql = "INSERT INTO post (author, date, title, description, tags, location, time) VALUES (";
             sql+= "'" + grabbed[i].author + "',";
-            sql+= "'" + date + "',";
+            sql+= "'" + grabbed[i].date +"',"
             sql+= "'" + grabbed[i].title + "',";
             sql+= "'" + grabbed[i].description + "',";
             sql+= "'" + grabbed[i].tags + "',";
-            sql+= "'" + grabbed[i].location + "'";
+            sql+= "'" + grabbed[i].location + "',";
+            sql+= "'" + grabbed[i].time + "'";
             sql+= ");";
             console.log(sql);
             con.query(sql, function(err, result) {

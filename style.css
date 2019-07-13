@@ -151,6 +151,10 @@ hr{
     font-weight: bold;
     cursor: pointer;
     text-align: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 1;
 }
 
 .navbar input.newButton:hover {
