@@ -18,22 +18,20 @@
             <br>
         </div>
         <h2>Create a new event</h2>
-        <form name="newEvent" method="POST" action="/">    
-            <h3>Your Name:</h3>
-            <div class="input-field"> <input type="text" name="author" id="author"> </div>
-            <h3>The Event:</h3> 
-            <div class="input-field"> <input type="text" name="title" id="title"> </div>
-            <h3>The Date:</h3> 
-            <div class="input-field"> <input type="text" name="date" id="date"> </div>
-            <h3>The Location:</h3> 
-            <div class="input-field"> <input type="text" name="location" id="location"> </div>
-            <h3>The Time:</h3> 
-            <div class="input-field"> <input type="text" name="time" id="time"> </div>
+        <br>
+        <form name="newEvent" method="POST" action="/">
+
+            <input name="author" id="author" type="text" class="ghost-input" placeholder="What is your name?" required>
+            <input name="title" id="title" type="text" class="ghost-input" placeholder="What is your event called?" required>
+            <input name="date" id="date" type="text" class="ghost-input" placeholder="When is your event?" required>
+            <input name="time" id="time" type="text" class="ghost-input" placeholder="What time is your event?" required>
+            <input name="location" id="location" type="text" class="ghost-input" placeholder="Where is your event?" required>
+
             <h3>Describe The Event:</h3> 
             <div class="input-field"> <textarea rows="5" cols="50" name="description" id="description" placeholder="Provide a brief Description of your event!"> </textarea></div>
             <h3>Add some tags:</h3> 
             <div class="input-field"> <textarea rows="5" cols="50" name="tags" id="tags" placeholder="Provide a brief Description of your event!"> </textarea></div>
-            <input type="submit">      
+            <input type="submit" class="ghost-button" value="Get Weather">
         </form>
 
     </body>      

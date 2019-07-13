@@ -33,6 +33,8 @@ h2 {
     font-family: sans-serif;
     font-weight: bolder;
     margin-left: 5%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     font-size: 36px;
 }
 
@@ -181,6 +183,38 @@ hr{
     text-decoration: none;
 }
 
-.input-field{
-    margin: 0% 50%;
+/* source: */
+
+.ghost-input {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: block;
+    font-weight: bold;
+    width: 50%;
+    font-size: 24px;
+    border:0px;
+    margin-bottom: 10px;
+    color: #2528C6;
+    background: #F9FDFF;
+    font-family: sans-serif;
 }
+
+.ghost-input::placeholder {
+    color: #2E93EA;
+    font-weight: normal !important;
+}
+
+.ghost-button {
+  background-color: transparent;
+  border:2px solid #ddd;
+  padding:10px 30px;
+  width: 100%;
+  min-width: 350px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+
