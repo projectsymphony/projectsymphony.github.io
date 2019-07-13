@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Symphony</title>
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
+    <head>
+        <title>Symphony</title>
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
 
-<body>
-    <h1>Symphony</h1>
-    <h3>All your events, in one place.</h3>
-    <p>Welcome!</p>
-</body>
-
+    <body>
+        <div class="title-heading">
+            <h1>Symphony</h1>
+            <h3>All your events, in one place.</h3>
+            <br>
+        </div>
+        <div class="navbar">
+            <input class="newButton" type="button" value="&#x266b; New"
+                onclick="window.location.href='http://tejas.website'" />
+        </div>
+        <div class='event-box-container'>
+        <!-- Formatting Script -->
+            <% for(var i = 0; i < data.length; i++) { %>
+                <a href='#' class='event-block'>
+                   <h6 class='author'>posted by <%= data[i].author %></h6>
+                   <h6 class='timestamp'><%= data[i].created_at %></h6>
+                   <h4><%= data[i].title %></h4>
+                   <h5> <%= data[i].date %> <span class='location-tag'>@ <%= data[i].location %> </span></h5>
+                   <p class='description'> <%= data[i].description %> </p>
+                </a>
+                <hr>
+            <% } %>
+        </div>
+    </body>      
 </html>
