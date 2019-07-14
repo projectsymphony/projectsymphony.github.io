@@ -36,7 +36,7 @@ h2 {
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-size: 2.2em;
-    color: green;
+    color: black;
 }
 
 h1:hover {
@@ -208,7 +208,7 @@ hr{
 
 .ghost-input::placeholder {
     color: #2E93EA;
-    font-weight: bold !important;
+    font-weight: normal !important;
     font-family: 'Montserrat';
 }
 
@@ -230,6 +230,8 @@ hr{
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .textarea-label{
