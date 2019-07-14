@@ -18,6 +18,7 @@
             <br>
         </div>
         <h2>Create a new event</h2>
+        <hr class="under-header">
         <br>
         <form name="newEvent" method="POST" action="/">
 
@@ -27,12 +28,11 @@
             <input name="time" id="time" type="text" class="ghost-input" placeholder="What time is your event?" required>
             <input name="location" id="location" type="text" class="ghost-input" placeholder="Where is your event?" required>
 
-            <h3>Describe The Event:</h3> 
-            <div class="input-field"> <textarea rows="5" cols="50" name="description" id="description" placeholder="Provide a brief Description of your event!"> </textarea></div>
-            <h3>Add some tags:</h3> 
-            <div class="input-field"> <textarea rows="5" cols="50" name="tags" id="tags" placeholder="Provide a brief Description of your event!"> </textarea></div>
-            <input type="submit" class="ghost-button" value="Get Weather">
+            <h3 class="textarea-label">Describe The Event:</h3> 
+            <div class="input-textarea"> <textarea rows="5" cols="50" name="description" id="description" placeholder="Provide a brief Description of your event!"> </textarea></div>
+            <h3 class="textarea-label">Add some tags:</h3> 
+            <div class="input-textarea"> <textarea rows="5" cols="50" name="tags" id="tags" placeholder="Provide a brief Description of your event!"> </textarea></div>
+            <input type="submit" class="ghost-button" value="Submit Event">
         </form>
-
     </body>      
 </html>
