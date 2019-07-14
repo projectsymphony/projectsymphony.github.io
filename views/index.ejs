@@ -19,7 +19,7 @@
         
         <div class='event-box-container'>
         <!-- formatting script -->
-            <% for(var i = 0; i < data.length; i++) { %>
+	<% for(var i = data.length-1; i > 0; i--) { %>
                 <a href='#' class='event-block'>
                    <h6 class='author'>posted by <%= data[i].author %></h6>
                    <h6 class='timestamp'><%= data[i].created_at %></h6>
