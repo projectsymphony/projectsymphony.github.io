@@ -144,9 +144,9 @@ hr{
 }
 
 .navbar{
-    display: flex;
+    /* display: flex; */
     width: 23%;
-    float: left;
+    /* float: left; */
     height: 100vh;
     position: fixed;
     margin: 0px;
@@ -154,12 +154,11 @@ hr{
     justify-content: center;
 }
 
-.navbar input {
+.navbar div input {
     background-color: #2E93EA;
     height: 75px;
     width: 100%;
-    margin-left: 8%;
-    margin-right: 8%;
+    margin: 0% 8%;    
     padding-left: 20px;
     border-radius: 5px;
     border: 0px;
@@ -173,6 +172,13 @@ hr{
     -moz-appearance: none;
     appearance: none;
     opacity: 1;
+    width: 19vw;;
+}
+
+.navbar div{
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
 }
 
 .navbar input.newButton:hover {
