@@ -17,6 +17,7 @@ router.post('/', urlencodedParser, (req, res) => {
     db.connection.query(sql_ins, function (error, results, fields) {
     });
     res.redirect('/');
+    // str = str.replace('abc', '');
 });
 
 router.get('/', (req, res) => {
