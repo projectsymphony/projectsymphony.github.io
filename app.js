@@ -2,6 +2,7 @@ const http = require('http');
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
+var db = require('./db')
 const path = require('path');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
@@ -18,7 +19,7 @@ app.use('/static', express.static('static'))
 
 //using routes
 app.use('/', require('./routes/index'));
-// app.use('users', require('./routes/users'));
+app.use('/', require('./routes/users'));
 
 //starting server on port 3000
 app.listen('3000', () => {
