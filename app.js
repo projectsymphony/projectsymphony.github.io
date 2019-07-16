@@ -1,5 +1,9 @@
 const http = require('http');
 const express = require('express');
+const expressValidator = require('express-validator')
+
+const expressSession = require('express-session')
+const expressMessages = require('express-messages')
 const router = express.Router();
 const mysql = require('mysql');
 var db = require('./db')
@@ -10,7 +14,6 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 // starting Express.js app
 const app = express();
-
 // setting view engine
 app.set('view engine', 'ejs')
 
@@ -26,4 +29,4 @@ app.listen('3000', () => {
     console.log('Server started on port 3000')
 });
 
-module.exports = router;
+module.exports = app;

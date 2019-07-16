@@ -1,5 +1,8 @@
 const http = require('http');
 const express = require('express');
+const expressValidator = require('express-validator')
+const expressSession = require('express-session')
+const expressMessages = require('express-messages')
 const router = express.Router();
 const mysql = require('mysql');
 var db = require('./../db')
@@ -7,22 +10,6 @@ const path = require('path');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-
-// // establishing connection to database
-// var connection = mysql.createConnection({
-//     host: '35.231.65.224',
-//     user: 'root',
-//     password: 'aH5ckblhF084kpCI',
-//     database: 'Symphony'
-// });
-
-// connection.connect(function (err) {
-//     if (err) {
-//         console.error('error connecting: ' + err.stack);
-//         return;
-//     }
-//     console.log('connected as id ' + connection.threadId);
-// });
 
 router.post('/', urlencodedParser, (req, res) => {
     console.log(req.body);
