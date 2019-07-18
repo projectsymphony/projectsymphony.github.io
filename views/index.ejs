@@ -4,6 +4,10 @@
     <head>
         <title>Symphony</title>
         <link rel="stylesheet" href="/static/styles.css">
+        <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./js/filter.js"></script>
+        </head>
     </head>
 
     <body>
@@ -14,7 +18,7 @@
         </div>
         <div class="our-navbar">
            <div> <input type="button" onclick="window.location.href = './new';" value="&#x266b; New"/> </div>
-           <div> <input type="button" onclick="window.location.href = './';" value="# Filter"/> </div>
+           <div> <input type="button" id="filter-button" onclick="window.location.href = './';" value="# Filter"/> </div>
            <div> <input type="button" onclick="window.location.href = './login';" value="@ Login"/> </div>
            <div> <input type="button" onclick="window.location.href = './register';" value="&#9658; Register"/> </div>
         </div>

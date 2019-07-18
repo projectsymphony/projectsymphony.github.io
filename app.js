@@ -19,6 +19,7 @@ app.set('view engine', 'ejs')
 
 // using stylesheets
 app.use('/static', express.static('static'))
+app.use('/js', express.static('js'))
 
 //using routes
 app.use('/', require('./routes/index'));
