@@ -249,4 +249,7 @@ hr{
     padding-right: 0px;
 }
 
+#filter-dropdown{
+    display: none;
+}
 
