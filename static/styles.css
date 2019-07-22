@@ -145,7 +145,7 @@ hr{
     display: inline-block;
 }
 
-.our-navbar{
+.navbar{
     /* display: flex; */
     width: 23%;
     /* float: left; */
@@ -156,7 +156,7 @@ hr{
     justify-content: center;
 }
 
-.our-navbar .navbar-button {
+.navbar .navbar-button {
     background-color: #2E93EA;
     border: none;
     height: 75px;
@@ -181,11 +181,11 @@ hr{
     transition: background-color 0.3s ease-out;
 }
 
-.our-navbar .navbar-button:hover {
+.navbar .navbar-button:hover {
     background: #2528C6;
 }
 
-.our-navbar div{
+.navbar div{
     display: block;
     width: 100%;
     margin-bottom: 8px;

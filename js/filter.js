@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Open Filter Menu
-    $(".our-navbar #filter-button").click( function() {
+    $(".navbar #filter-button").click( function() {
         $("#filter-dropdown").slideToggle("fast", "swing", function(){});
     });
 

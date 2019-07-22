@@ -12,38 +12,41 @@
     </head>
 
     <body>
-        <div class="title-heading">
-            <a href="/"> <h1>Symphony</h1> </a>
-            <h3>All your events, in one place.</h3>
-            <br>
-        </div>
-        <div class="our-navbar">
-            <div> <input class="navbar-button" type="button" onclick="window.location.href = './new';" value="&#x266b; New"/> </div>
-
-            <%# Filter Dropdown and Form %>
-            <div> <input class="navbar-button" type="button" id="filter-button" value="# Filter"/> </div>
-            <div id="filter-dropdown">
-                <form name="filter" action="filter" method="post">
-                    <label for="search-tags" class="input-label"> <h3>Search</h3> </label>
-                    <input class="filter-input" id="search-tags" type="text">
-                </form>
+        <div class="wrapper">
+            <div class="title-heading">
+                <a href="/"> <h1>Symphony</h1> </a>
+                <h3>All your events, in one place.</h3>
+                <br>
             </div>
-            <div> <input class="navbar-button" type="button" onclick="window.location.href = './login';" value="@ Login"/> </div>
-            <div> <input class="navbar-button" type="button" onclick="window.location.href = './register';" value="&#9658; Register"/> </div>
-        </div>
-        
-        <div class='event-box-container'>
-        <!-- formatting script -->
-	<% for(var i = data.length-1; i > 0; i--) { %>
-                <a href='#' class='event-block'>
-                   <h6 class='author'>posted by <%= data[i].author %></h6>
-                   <h6 class='timestamp'><%= data[i].created_at %></h6>
-                   <h4><%= data[i].title %></h4>
-                   <h5> <%= data[i].date %> <span class='location-tag'>@ <%= data[i].location %>, <%= data[i].time %> </span></h5>
-                   <p class='description'> <%= data[i].description %> </p>
-                </a>
-                <hr>
-            <% } %>
+            <div class="navbar">
+                <div> <input class="navbar-button" type="button" onclick="window.location.href = './new';" value="&#x266b; New"/> </div>
+
+                <%# Filter Dropdown and Form %>
+                <div> <input class="navbar-button" type="button" id="filter-button" value="# Filter"/> </div>
+                <div id="filter-dropdown">
+                    <form name="filter" action="filter" method="post">
+                        <label for="search-tags" class="input-label"> <h3>Search</h3> </label>
+                        <input class="filter-input" id="search-tags" type="text">
+                    </form>
+                </div>
+                <div> <input class="navbar-button" type="button" onclick="window.location.href = './login';" value="@ Login"/> </div>
+                <div> <input class="navbar-button" type="button" onclick="window.location.href = './register';" value="&#9658; Register"/> </div>
+            </div>
+            <div class="content">
+                <div class='event-box-container'>
+                <!-- formatting script -->
+                    <% for(var i = data.length-1; i > 0; i--) { %>
+                        <a href='#' class='event-block'>
+                        <h6 class='author'>posted by <%= data[i].author %></h6>
+                        <h6 class='timestamp'><%= data[i].created_at %></h6>
+                        <h4><%= data[i].title %></h4>
+                        <h5> <%= data[i].date %> <span class='location-tag'>@ <%= data[i].location %>, <%= data[i].time %> </span></h5>
+                        <p class='description'> <%= data[i].description %> </p>
+                        </a>
+                        <hr>
+                    <% } %>
+                </div>
+            </div>
         </div>
         <%# Uncomment code below for SAL %>
         <%# <img src="data:image/jpeg;base64, +IMAGE> #%> 
