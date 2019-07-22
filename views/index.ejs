@@ -17,13 +17,18 @@
             <br>
         </div>
         <div class="our-navbar">
-            <div> <input type="button" onclick="window.location.href = './new';" value="&#x266b; New"/> </div>
-            <div> <input type="button" id="filter-button" value="# Filter"/> </div>
+            <div> <input class="navbar-button" type="button" onclick="window.location.href = './new';" value="&#x266b; New"/> </div>
+
+            <%# Filter Dropdown and Form %>
+            <div> <input class="navbar-button" type="button" id="filter-button" value="# Filter"/> </div>
             <div id="filter-dropdown">
-                You can put whatever HTML you want in a panel!
+                <form name="filter" action="filter" method="post">
+                    <label for="search-tags" class="input-label"> <h3>Search</h3> </label>
+                    <input class="filter-input" id="search-tags" type="text">
+                </form>
             </div>
-            <div> <input type="button" onclick="window.location.href = './login';" value="@ Login"/> </div>
-            <div> <input type="button" onclick="window.location.href = './register';" value="&#9658; Register"/> </div>
+            <div> <input class="navbar-button" type="button" onclick="window.location.href = './login';" value="@ Login"/> </div>
+            <div> <input class="navbar-button" type="button" onclick="window.location.href = './register';" value="&#9658; Register"/> </div>
         </div>
         
         <div class='event-box-container'>

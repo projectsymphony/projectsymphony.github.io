@@ -1,5 +1,12 @@
 $(document).ready(function () {
-    $(".navbar #filter-button").click( function() {
-        $("#filter-dropdown").css("display", "block");
+    // Open Filter Menu
+    $(".our-navbar #filter-button").click( function() {
+        $("#filter-dropdown").slideToggle("fast", "swing", function(){});
     });
+
+    // //close filter menu
+    // $(".our-navbar #filter-close").click(function () {
+    //     $("#filter-dropdown").slideUp("fast", "swing", function(){});
+    // });
+
 });

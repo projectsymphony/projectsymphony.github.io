@@ -156,7 +156,7 @@ hr{
     justify-content: center;
 }
 
-.our-navbar div input {
+.our-navbar .navbar-button {
     background-color: #2E93EA;
     border: none;
     height: 75px;
@@ -175,6 +175,14 @@ hr{
     appearance: none;
     opacity: 1;
     width: 19vw;;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+.our-navbar .navbar-button:hover {
+    background: #2528C6;
 }
 
 .our-navbar div{
@@ -183,9 +191,6 @@ hr{
     margin-bottom: 8px;
 }
 
-.our-navbar div input:hover {
-    background: #2528C6;
-}
 
 .location-tag {
     color: #2528C6;
@@ -251,5 +256,49 @@ hr{
 
 #filter-dropdown{
     display: none;
+}
+
+#filter-dropdown h3{
+    margin-left: 8%;
+    display: inline;
+}
+
+
+#filter-close{
+    float: right;
+    margin-right: 8%;
+    background-color: #2E93EA;
+    border: 1px solid #2E93EA;
+    border-radius: 3px;
+    height: auto;
+    width: auto;
+    padding: 2px 5px;
+    font-family: sans-serif;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 1;
+    width: auto;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+.input-label{
+    margin-left: 8%;
+    margin-right: 15px;
+    padding: 0;
+    display: inline-block;
+}
+.filter-input{
+    display: inline-block;
+    width: 50%;
+    margin: 0;
 }
 
