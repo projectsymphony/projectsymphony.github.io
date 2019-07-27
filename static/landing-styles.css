@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(50px max-content);
+    grid-template-areas: "n n"
+                         "h h"
+                         "c c";
+}
+
+.navbar{
+    grid-area: n;
+    text-align: center;
+    display: grid;
+    background: #75808a;
+    grid-column-gap: 5px; 
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+.navbar a{
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #505a68;
+    font-size: 1.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar a:hover{
+    background: #727885; 
+    transition: 500ms;
+    color: #80bcf5; 
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13vh;
+    background: #0084ff;
+    color: white;
+    text-align: center;
+    grid-area: h;  
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+}
+
+.header button{
+    height: 5vh;
+    margin: 0px 30px;
+    padding: 30px;
+    line-height: 0em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 3px solid #80bcf5;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 0.7em;
+    text-align: center;
+    background: white;
+    color: #80bcf5;
+    
+}
+.header button:hover{
+    cursor: pointer;
+    background: #01519c;
+    color: white;
+    transition: 500ms;
+}
+
+.content{
+    margin-top: 40px;
+    margin-left: 30px;
+    grid-area: c;
+    text-align: left;
+    font-size: 1.7em;
+    font-family: Montserrat;
+    font-weight: bold;
+}
