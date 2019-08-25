@@ -4,51 +4,62 @@
     <head>
         <title>Symphony</title>
         <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="/static/styles.css">
-        <head>
+        <!-- <link rel="stylesheet" href="/static/styles.css"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="./../js/filter.js"></script>
-        </head>
     </head>
 
     <body>
-        <div class="wrapper">
-            <div class="title-heading">
+        <div class="container">
+            <div class="row">
                 <a href="index"> <h1>Symphony</h1> </a>
                 <h3>All your events, in one place.</h3>
                 <br>
             </div>
-            <div class="navbar">
-                <div> <input class="navbar-button" type="button" onclick="window.location.href = './new';" value="&#x266b; New"/> </div>
-
-                <%# Filter Dropdown and Form %>
-                <div> <input class="navbar-button" type="button" id="filter-button" value="# Filter"/> </div>
-                <div id="filter-dropdown">
-                    <form name="filter" action="filter" method="post">
-                        <label for="search-tags" class="input-label"> <h3>Search</h3> </label>
-                        <input class="filter-input" id="search-tags" type="text">
-                    </form>
+            <div class="row">    
+                <div class="col-2">
+                    <div> <input class="navbar-button" type="button" onclick="window.location.href = './new';" value="&#x266b; New"/> </div>
+                    
+                    <%# Filter Dropdown and Form %>
+                    <div> <input class="navbar-button" type="button" id="filter-button" value="# Filter"/> </div>
+                    <div id="filter-dropdown">
+                        <form name="filter" action="filter" method="post">
+                            <label for="search-tags" class="input-label"> <h3>Search</h3> </label>
+                            <input class="filter-input" id="search-tags" type="text">
+                        </form>
+                    </div>
+                    <div> <input class="navbar-button" type="button" onclick="window.location.href = './login';" value="@ Login"/> </div>
+                    <div> <input class="navbar-button" type="button" onclick="window.location.href = './register';" value="&#9658; Register"/> </div>
                 </div>
-                <div> <input class="navbar-button" type="button" onclick="window.location.href = './login';" value="@ Login"/> </div>
-                <div> <input class="navbar-button" type="button" onclick="window.location.href = './register';" value="&#9658; Register"/> </div>
-            </div>
-            <div class="content">
-                <div class='event-box-container'>
-                <!-- formatting script -->
-                    <% for(var i = data.length-1; i > 0; i--) { %>
-                        <a href='#' class='event-block'>
-                        <h6 class='author'>posted by <%= data[i].author %></h6>
-                        <h6 class='timestamp'><%= data[i].created_at %></h6>
-                        <h4><%= data[i].title %></h4>
-                        <h5> <%= data[i].date %> <span class='location-tag'>@ <%= data[i].location %>, <%= data[i].time %> </span></h5>
-                        <p class='description'> <%= data[i].description %> </p>
-                        </a>
-                        <hr>
-                    <% } %>
+                <div class="col-4">
+                    <div class='event-box-container'>
+                        <!-- formatting script -->
+                        <% for(var i = data.length-1; i > 0; i--) { %>
+                            <a href='#' class='event-block'>
+                                <h6 class='author'>posted by <%= data[i].author %></h6>
+                                <h6 class='timestamp'><%= data[i].created_at %></h6>
+                                <h4><%= data[i].title %></h4>
+                                <h5> <%= data[i].date %> <span class='location-tag'>@ <%= data[i].location %>, <%= data[i].time %> </span></h5>
+                                <p class='description'> <%= data[i].description %> </p>
+                                </a>
+                                <hr>
+                                <% } %>
+                    </div>
                 </div>
             </div>
         </div>
-        <%# Uncomment code below for SAL %>
-        <%# <img src="data:image/jpeg;base64, +IMAGE> #%> 
+        // end of code.
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
     </body>      
 </html>
