@@ -3,6 +3,10 @@
 
     <head>
         <title>New Event</title>
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
         <link rel="stylesheet" href="/static/styles.css">
         <style>
             body {
@@ -12,28 +16,59 @@
     </head>
 
     <body>
-        <div class="title-heading">
-            <a href="index"> <h1>Symphony</h1> </a>
-            <h3>All your events, in one place.</h3>
+        <div class="container my-3">
+
+            <div class="d-flex justify-content-center align-items-center my-4">
+                <a href="index" class=""> <h1 class="mx-3">Symphony</h1> </a>
+                <h3 class="">All your events, in one place.</h3>
+            </div>
+            <hr class="under-header">
+            <h2 class="justify-items-center">Create a new event</h2>
+            <br>
+            <div class="container border rounded">
+                <form name="newEvent" method="POST" action="index">
+                    <div class="form-group mt-3">
+                        <label for="author">Your Name</label>
+                        <input name="author" id="author" type="text" class="form-control" placeholder="Ex. Leon Appleseed" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Event Title</label>    
+                        <input name="title" id="title" type="text" class="form-control" placeholder="Ex. &quot;Python Class at Apple&quot;" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date of Event</label>
+                        <input name="date" id="date" type="text" class="form-control" placeholder="Ex. March 9th, 2020" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time of Event</label>
+                        <input name="time" id="time" type="text" class="form-control" placeholder="Ex. 5:00 PM" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location of Event</label>
+                        <input name="location" id="location" type="text" class="form-control" placeholder="Ex. 90 Wheeler St, New York, NY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label> 
+                        <textarea rows="5" name="description" id="description" class="form-control" placeholder="Provide a brief Description of your event"> </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tags">Tags</label>
+                        <textarea rows="5" name="tags" id="tags" class="form-control" placeholder="Add some tags"> </textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3">Post Event</button>
+                </form>
+            </div>                
         </div>
-        <h2>Create a new event</h2>
-        <hr class="under-header">
-        <br>
-        <form name="newEvent" method="POST" action="index">
+            <%# bootstrap %>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
 
-            <input name="author" id="author" type="text" class="ghost-input" placeholder="What is your name?" required>
-            <input name="title" id="title" type="text" class="ghost-input" placeholder="What is your event called?" required>
-            <input name="date" id="date" type="text" class="ghost-input" placeholder="When is your event?" required>
-            <input name="time" id="time" type="text" class="ghost-input" placeholder="What time is your event?" required>
-            <input name="location" id="location" type="text" class="ghost-input" placeholder="Where is your event?" required>
-
-            <h3 class="textarea-label">Describe The Event:</h3> 
-            <div class="input-textarea"> <textarea rows="5" cols="50" name="description" id="description" placeholder="Provide a brief Description of your event!"> </textarea></div>
-            <h3 class="textarea-label">Add some tags:</h3> 
-            <div class="input-textarea"> <textarea rows="5" cols="50" name="tags" id="tags" placeholder="Provide a brief Description of your event!"> </textarea></div>
-            <input type="submit" class="ghost-button" value="Submit Event">
-        </form>
-
-        <%# bootstrap %>
     </body>      
 </html>

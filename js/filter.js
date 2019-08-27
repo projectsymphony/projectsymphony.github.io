@@ -1,7 +1,9 @@
 $(document).ready(function () {
     // Open Filter Menu
-    $(".navbar #filter-button").click( function() {
+    $("#filter-button").click( function() {
+        // console.log("hi");
         $("#filter-dropdown").slideToggle("fast", "swing", function(){});
+
     });
 
     // //close filter menu

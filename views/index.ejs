@@ -4,54 +4,59 @@
     <head>
         <title>Symphony</title>
         <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
-        <!-- <link rel="stylesheet" href="/static/styles.css"> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/styles.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="./../js/filter.js"></script>
     </head>
 
     <body>
-        <div class="container">
-            <div class="row">
-                <a href="index"> <h1>Symphony</h1> </a>
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center my-4" id="title">
+                <a href="index" class="mx-3"> <h1>Symphony</h1> </a>
                 <h3>All your events, in one place.</h3>
                 <br>
             </div>
             <div class="row">    
-                <div class="col-2">
-                    <div> <input class="navbar-button" type="button" onclick="window.location.href = './new';" value="&#x266b; New"/> </div>
-                    
-                    <%# Filter Dropdown and Form %>
-                    <div> <input class="navbar-button" type="button" id="filter-button" value="# Filter"/> </div>
-                    <div id="filter-dropdown">
-                        <form name="filter" action="filter" method="post">
-                            <label for="search-tags" class="input-label"> <h3>Search</h3> </label>
-                            <input class="filter-input" id="search-tags" type="text">
-                        </form>
+                <div class="col-3" >
+                    <div class="sidenav">
+
+                        <div> <input class="btn btn-outline-primary my-3" type="button" onclick="window.location.href = './new';" value="&#x266b; New"/> </div>
+                        
+                        <%# Filter Dropdown and Form %>
+                        <div> <input class="btn btn-outline-primary my-3" type="button" id="filter-button" value="# Filter"/> </div>
+                        <div id="filter-dropdown">
+                            <form name="filter" action="filter" method="post">
+                                <label for="search-tags" class="input-label"> <h3>Search</h3> </label>
+                                <input class="filter-input" id="search-tags" type="text">
+                            </form>
+                        </div>
+                        <div> <input class="btn btn-outline-primary my-3" type="button" onclick="window.location.href = './login';" value="@ Login"/> </div>
+                        <div> <input class="btn btn-outline-primary my-3" type="button" onclick="window.location.href = './register';" value="&#9658; Register"/> </div>
                     </div>
-                    <div> <input class="navbar-button" type="button" onclick="window.location.href = './login';" value="@ Login"/> </div>
-                    <div> <input class="navbar-button" type="button" onclick="window.location.href = './register';" value="&#9658; Register"/> </div>
                 </div>
-                <div class="col-4">
-                    <div class='event-box-container'>
+                <div class="col">
+                    <div class=''>
                         <!-- formatting script -->
                         <% for(var i = data.length-1; i > 0; i--) { %>
-                            <a href='#' class='event-block'>
+                            <!-- <div class="container border rounded my-3"> -->
+                                <a href='#'>
                                 <h6 class='author'>posted by <%= data[i].author %></h6>
                                 <h6 class='timestamp'><%= data[i].created_at %></h6>
                                 <h4><%= data[i].title %></h4>
                                 <h5> <%= data[i].date %> <span class='location-tag'>@ <%= data[i].location %>, <%= data[i].time %> </span></h5>
                                 <p class='description'> <%= data[i].description %> </p>
                                 </a>
+                            <!-- </div> -->
                                 <hr>
                                 <% } %>
                     </div>
                 </div>
             </div>
         </div>
-        // end of code.
+        <!-- end of code. -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
